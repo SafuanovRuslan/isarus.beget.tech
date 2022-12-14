@@ -1,0 +1,103 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.app {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: min-content auto 50px;
+}
+
+#uploadImage, .footer {
+    background-color: rgb(68, 65, 65);
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#uploadImage {
+    height: min-content;
+    padding: 40px 20px;
+}
+
+.form-group {
+    margin: 0;
+}
+
+.content {
+    padding: 16px;
+}
+
+.footer {
+    line-height: 50px;
+}
+
+
+/* Скрываем поле ввода */
+#uploadform-imagefiles {
+    display: block;
+    position: absolute;
+    left: -100000px;
+}
+
+#imageFiles_label, #submit {
+    width: 200px;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#imageFiles_label {
+    background-color: #1fd31f;
+}
+
+#submit {
+    background-color: #007bff;
+}
+
+#submit[disabled="disabled"] {
+    filter: grayscale(1);
+    cursor: not-allowed;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Пагинация */
+.pagination li {
+    background-color: white;
+    border: 1px solid black;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+}
+
+.pagination li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 36px;
+}
+
+.pagination li.prev,
+.pagination li.next {
+    background-color: #007bff;
+}
+
+.pagination li.prev.disabled,
+.pagination li.next.disabled {
+    background-color: #7b7b7b;
+}
+
+.pagination li.prev a,
+.pagination li.next a {
+    color: white;
+}
